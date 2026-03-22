@@ -46,13 +46,13 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./.vitepress/*"]
-    },
-    "include": [
-      "**/*.ts",
-      "**/*.mts",
-      "**/*.vue",
-      ".vitepress/**/*.ts",
-      ".vitepress/**/*.mts"
-    ]
+    }
+    // "include": [
+    //   "**/*.ts",
+    //   "**/*.mts",
+    //   "**/*.vue",
+    //   ".vitepress/**/*.ts",
+    //   ".vitepress/**/*.mts"
+    // ]
   }
 }
