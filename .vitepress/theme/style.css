@@ -1,0 +1,137 @@
+/**
+ * Theme overrides — VitePress CSS variables:
+ * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
+ */
+
+:root {
+  --vp-font-family-base: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+  --vp-font-family-mono: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, monospace;
+
+  --vp-c-default-1: var(--vp-c-gray-1);
+  --vp-c-default-2: var(--vp-c-gray-2);
+  --vp-c-default-3: var(--vp-c-gray-3);
+  --vp-c-default-soft: var(--vp-c-gray-soft);
+
+  /* Teal / cyan brand — calm, readable */
+  --vp-c-brand-1: #0f766e;
+  --vp-c-brand-2: #0d9488;
+  --vp-c-brand-3: #14b8a6;
+  --vp-c-brand-soft: rgba(20, 184, 166, 0.14);
+
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+
+  --vp-c-bg: #f8faf9;
+  --vp-c-bg-alt: #f1f5f4;
+  --vp-c-bg-elv: #ffffff;
+  --vp-c-border: rgba(15, 118, 110, 0.12);
+
+  --vp-sidebar-bg-color: #f4f7f6;
+}
+
+.dark {
+  --vp-c-bg: #0f1413;
+  --vp-c-bg-alt: #141a19;
+  --vp-c-bg-elv: #1a2220;
+  --vp-c-border: rgba(45, 212, 191, 0.15);
+
+  --vp-c-brand-1: #5eead4;
+  --vp-c-brand-2: #2dd4bf;
+  --vp-c-brand-3: #14b8a6;
+  --vp-c-brand-soft: rgba(45, 212, 191, 0.12);
+
+  --vp-sidebar-bg-color: #121816;
+}
+
+/* Headings in doc content — slight serif for long reads */
+.vp-doc h1,
+.vp-doc h2 {
+  font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Home hero */
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(
+    120deg,
+    #0f766e 0%,
+    #0d9488 45%,
+    #2dd4bf 100%
+  );
+
+  --vp-home-hero-image-background-image: linear-gradient(
+    -38deg,
+    rgba(13, 148, 136, 0.55) 0%,
+    rgba(45, 212, 191, 0.35) 55%,
+    rgba(15, 118, 110, 0.45) 100%
+  );
+  --vp-home-hero-image-filter: blur(42px);
+}
+
+.VPHero .text {
+  color: var(--vp-c-text-2);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+  max-width: 36rem;
+  line-height: 1.65;
+}
+
+.VPHero .tagline {
+  opacity: 0.92;
+}
+
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(52px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(64px);
+  }
+}
+
+/* Buttons */
+:root {
+  --vp-button-brand-border: transparent;
+  --vp-button-brand-text: var(--vp-c-white);
+  --vp-button-brand-bg: var(--vp-c-brand-3);
+  --vp-button-brand-hover-border: transparent;
+  --vp-button-brand-hover-text: var(--vp-c-white);
+  --vp-button-brand-hover-bg: var(--vp-c-brand-2);
+  --vp-button-brand-active-border: transparent;
+  --vp-button-brand-active-text: var(--vp-c-white);
+  --vp-button-brand-active-bg: var(--vp-c-brand-1);
+}
+
+/* Custom blocks */
+:root {
+  --vp-custom-block-tip-border: transparent;
+  --vp-custom-block-tip-text: var(--vp-c-text-1);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-soft);
+  --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
+}
+
+/* Local search */
+.DocSearch {
+  --docsearch-primary-color: var(--vp-c-brand-1) !important;
+}
+
+/* Sidebar nav — subtle separation */
+.VPSidebarItem.level-0 > .item > .link {
+  font-weight: 600;
+}
