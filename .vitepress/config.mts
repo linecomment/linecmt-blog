@@ -11,8 +11,15 @@ const sharedSidebarOptions = {
   frontmatterOrderDefaultValue: 100,
 } as const
 
+// GitHub Pages：项目页为 /<仓库名>/，用户/组织站点页（<user>.github.io）为 /
+// CI 通过环境变量 VITEPRESS_BASE 注入；本地开发默认 '/'
+const base =
+  (process.env.VITEPRESS_BASE && process.env.VITEPRESS_BASE.trim()) || '/'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base,
+
   title: 'Linecmt 知识库',
   description: '个人知识记录、笔记与备忘',
   lang: 'zh-CN',
